@@ -118,4 +118,8 @@
     <ion-item>Private</ion-item>
     <ion-item>Public</ion-item>
   </ion-list>
+
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item *ngFor="let item of items; let i = index">{{ i + 1 }}. {{ item }}</ion-item>
+  </ion-list>
 </ion-content>
